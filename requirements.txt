@@ -26,12 +26,18 @@ click==8.1.7
     # via streamlit
 comm==0.2.1
     # via ipykernel
+contourpy==1.2.0
+    # via matplotlib
+cycler==0.12.1
+    # via matplotlib
 debugpy==1.8.1
     # via ipykernel
 decorator==5.1.1
     # via ipython
 executing==2.0.1
     # via stack-data
+fonttools==4.48.1
+    # via matplotlib
 gitdb==4.0.11
     # via gitpython
 gitpython==3.1.41
@@ -60,10 +66,14 @@ jupyter-core==5.7.1
     # via
     #   ipykernel
     #   jupyter-client
+kiwisolver==1.4.5
+    # via matplotlib
 markdown-it-py==3.0.0
     # via rich
 markupsafe==2.1.5
     # via jinja2
+matplotlib==3.8.2
+    # via -r requirements.in
 matplotlib-inline==0.1.6
     # via
     #   ipykernel
@@ -75,6 +85,8 @@ nest-asyncio==1.6.0
 numpy==1.26.4
     # via
     #   altair
+    #   contourpy
+    #   matplotlib
     #   pandas
     #   pyarrow
     #   pydeck
@@ -83,6 +95,7 @@ packaging==23.2
     # via
     #   altair
     #   ipykernel
+    #   matplotlib
     #   streamlit
 pandas==2.2.0
     # via
@@ -94,7 +107,9 @@ parso==0.8.3
 pexpect==4.9.0
     # via ipython
 pillow==10.2.0
-    # via streamlit
+    # via
+    #   matplotlib
+    #   streamlit
 platformdirs==4.2.0
     # via jupyter-core
 prompt-toolkit==3.0.43
@@ -115,9 +130,12 @@ pygments==2.17.2
     # via
     #   ipython
     #   rich
+pyparsing==3.1.1
+    # via matplotlib
 python-dateutil==2.8.2
     # via
     #   jupyter-client
+    #   matplotlib
     #   pandas
     #   streamlit
 pytz==2024.1
