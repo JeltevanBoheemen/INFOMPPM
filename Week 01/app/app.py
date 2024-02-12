@@ -49,13 +49,13 @@ df_weighted_rating = pd.read_csv('recommendations/recommendations-ratings-weight
 df_weighted_rating = df_weighted_rating.merge(df_books, on='ISBN')
 t.recommendations(df_weighted_rating)
 
-# st.subheader('Recommendations based on Frequently Reviewed Together (frequency)')
-# df = pd.read_csv('recommendations/recommendations-seeded-freq.csv', sep=';', encoding='latin-1', dtype=object)
-# isbn = st.session_state['ISBN']
-# df_recommendations = df[df['book_a'] == isbn].sort_values(by='count', ascending=False)
-# df_recommendations = df_recommendations.rename(columns={"book_b": "ISBN"})
-# df_recommendations = df_recommendations.merge(df_books, on='ISBN')
-# t.recommendations(df_recommendations)
+st.subheader('Recommendations based on Frequently Reviewed Together (frequency)')
+df = pd.read_csv('recommendations/recommendations-seeded-freq.csv', sep=';', encoding='latin-1', dtype=object)
+isbn = st.session_state['ISBN']
+df_recommendations = df[df['book_a'] == isbn].sort_values(by='count', ascending=False)
+df_recommendations = df_recommendations.rename(columns={"book_b": "ISBN"})
+df_recommendations = df_recommendations.merge(df_books, on='ISBN')
+t.recommendations(df_recommendations)
 
 # st.subheader('Recommendations based on Frequently Reviewed Together (associations)')
 # df = pd.read_csv('recommendations/recommendations-seeded-associations.csv', sep=';', encoding='latin-1', dtype=object)
