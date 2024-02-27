@@ -2,3 +2,8 @@ pandas
 streamlit
 ipykernel
 matplotlib
+scipy
+scikit-learn
+requests
+beautifulsoup4
+tqdm
